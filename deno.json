@@ -3,6 +3,7 @@
     "dev": "deno test && deno run --allow-net --allow-read --watch lib/main.ts"
   },
   "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "react": "npm:react@^19.0.0"
   }
 }

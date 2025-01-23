@@ -1,6 +1,7 @@
 import { serve } from "../deps.ts";
 import { renderFile } from "../deps.ts";
 
+
 async function handler(req: { url: string | URL; }) {
   const url = new URL(req.url);
 
