@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+        <!-- Header -->
+    <header id="header" class="d-flex justify-content-between align-items-center p-3 position-fixed w-100 top-0">
+        <img src="static/logos/Left Nav.png" alt="Logo Left" class="logo-left">
+        <img src="static/logos/_App badges.png" alt="Logo Right" class="logo-right">
+    </header>
+
+    <!-- Section 1 : Hero -->
+    <section id="hero" class="d-flex align-items-center justify-content-between p-4 bg-light">
+        <div class="hero-left flex-grow-1 me-4">
+            <h1 class="mb-3">The easiest way to manage projects</h1>
+            <p class="mb-4">
+                From the small stuff to the big picture, organizes the work so teams
+                know what to do, why it matters, and how to get it done.
+            </p>
+            <div class="cta-buttons d-flex gap-3">
+                <button class="btn btn-primary">Get Started</button>
+                <button class="btn btn-outline-primary d-flex align-items-center gap-2">
+                    <img src="static/logos/Icon.png" alt="Play icon" width="20"> Watch Video
+                </button>
+            </div>
+        </div>
+        <div class="hero-right flex-grow-1 d-flex justify-content-center">
+            <div class="phone-frame">
+                <img src="static/logos/Mobile.png" alt="Mobile phone illustration" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal p-4 rounded shadow bg-warning position-absolute top-0 end-0 mt-4 me-4" style="display: none;">
+            <h2 class="h5">Special Offer</h2>
+            <p class="mb-3">Discover our premium plans for project management.</p>
+            <button class="btn btn-primary">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Section 2 : Testimonials -->
+    <section id="testimonials" class="py-5 bg-white">
+        <div class="container d-flex justify-content-around">
+            <article class="testimonial text-center position-relative">
+                <img src="static/logos/picture.png" alt="Wade Wilson profile picture" class="rounded-circle mb-3" width="100" height="100">
+                <div class="bubble position-absolute p-3 bg-white rounded shadow d-none">
+                    <h2 class="h6">Become an affiliate</h2>
+                    <p>Join Landify affiliate<br>program and earn 25%<br>of every purchase</p>
+                    <button class="btn btn-primary">Register and start to earn</button>
+                </div>
+                <h3 class="h5">Wade Wilson</h3>
+                <p class="text-muted">CEO at ABC Corporation</p>
+            </article>
+            <article class="testimonial text-center position-relative">
+                <img src="static/logos/picture.png" alt="Jane Doe profile picture" class="rounded-circle mb-3" width="100" height="100">
+                <div class="bubble position-absolute p-3 bg-white rounded shadow d-none">
+                    <h2 class="h6">Become an affiliate</h2>
+                    <p>Join Landify affiliate<br>program and earn 25%<br>of every purchase</p>
+                    <button class="btn btn-primary">Register and start to earn</button>
+                </div>
+                <h3 class="h5">Jane Doe</h3>
+                <p class="text-muted">Product Manager</p>
+            </article>
+            <article class="testimonial text-center position-relative">
+                <img src="static/logos/picture.png" alt="John Smith profile picture" class="rounded-circle mb-3" width="100" height="100">
+                <div class="bubble position-absolute p-3 bg-white rounded shadow d-none">
+                    <h2 class="h6">Become an affiliate</h2>
+                    <p>Join Landify affiliate<br>program and earn 25%<br>of every purchase</p>
+                    <button class="btn btn-primary">Register and start to earn</button>
+                </div>
+                <h3 class="h5">John Smith</h3>
+                <p class="text-muted">Software Engineer</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section 3 : Logos -->
+    <section id="logos" class="py-5 bg-light">
+        <div class="container logo-grid d-flex flex-wrap justify-content-center gap-4">
+            <img src="static/logos/Airbnb.png" alt="Airbnb logo" width="150">
+            <img src="static/logos/Amazon.png" alt="Amazon logo" width="150">
+            <img src="static/logos/Atlassian.png" alt="Atlassian logo" width="150">
+            <img src="static/logos/BookMyShow.png" alt="BookMyShow logo" width="150">
+            <img src="static/logos/FedEx.png" alt="FedEx logo" width="150">
+            <img src="static/logos/Gatsby.png" alt="Gatsby logo" width="150">
+            <img src="static/logos/Google.png" alt="Google logo" width="150">
+            <img src="static/logos/Grubhub.png" alt="Grubhub logo" width="150">
+            <img src="static/logos/Hubspot.png" alt="Hubspot logo" width="150">
+            <img src="static/logos/Microsoft.png" alt="Microsoft logo" width="150">
+            <img src="static/logos/OLA.png" alt="OLA logo" width="150">
+            <img src="static/logos/OYO.png" alt="OYO logo" width="150">
+            <img src="static/logos/Servicenow.png" alt="Servicenow logo" width="150">
+            <img src="static/logos/Strapi.png" alt="Strapi logo" width="150">
+            <img src="static/logos/Walmart.png" alt="Walmart logo" width="150">
+        </div>
+    </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="d-flex justify-content-between align-items-center p-3 bg-dark text-light">
+            <p class="mb-0">© 2021 Landify UI Kit. All rights reserved</p>
+            <img src="static/logos/Social Links.png" alt="Footer Logo" class="footer-logo">
+        </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
