@@ -1,26 +1,24 @@
-/* Global Reset */
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 10;
   box-sizing: border-box;
   line-height: 1.5;
 }
 
 /* Header */
 #header {
-  background-color: transparent;
-  padding: 1rem;
-  position: absolute;  /* Fixe le header en haut de la page */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centre les images verticalement */
+  background: transparent;
+  padding: 0.5rem 0.5rem; /* Espace en haut et en bas */
 }
 
 #header .logo-left,
 #header .logo-right {
-  width: 300px;  /* Ajustez la taille des logos */
+  width: 300px; /* Taille augmentée */
   height: auto;
 }
 
@@ -41,13 +39,12 @@ body {
   align-items: center;
   padding: 2rem;
   background-color: #f4f4f4;
-  margin-top: 80px; /* Compense la hauteur du header */
+  position: relative;
 }
 
 .hero-left {
   flex: 1;
 }
-
 .hero-left h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -57,6 +54,12 @@ body {
   font-size: 1rem;
   color: #555;
   margin-bottom: 1.5rem;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .cta-buttons {
@@ -106,31 +109,67 @@ body {
   border-radius: 10px;
 }
 
-/* Modale */
+/* Modal 1 */
 #hero .modal {
-  display: none;
-  position: absolute;
+  display: none; /* Cachée par défaut */
+  position: fixed; /* Toujours visible en haut à droite */
   top: 150px;
-  left: 413px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 654px;
   height: 557px;
-  background: #FFE500;
+  background: #ffe500;
   border-radius: 24px;
   padding: 2rem;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#hero:hover .modal {
-  display: block;
+#hero .modal h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#hero .modal p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#hero .modal button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#hero:hover .modal,
+#hero .cta-buttons .btn-primary:focus + .modal {
+  display: block; /* La modal s'affiche au survol ou clic */
 }
 
 /* Section 2: Testimonials */
 #testimonials {
-  height: 564px; /* Hauteur fixe pour la section */
+  height: 564px;
   display: flex;
-  align-items: center; /* Centrer le contenu verticalement */
-  justify-content: space-around; /* Espacer les articles */
+  flex-direction: column; /* Colonne pour aligner titre et contenu */
+  align-items: center;
+  justify-content: space-between;
   padding: 2rem 0;
+}
+
+#testimonials h2 {
+  margin-bottom: 1rem;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end; /* Place les images en bas */
+  width: 100%;
+  position: relative; /* Pour positionner les bulles */
 }
 
 .testimonial {
@@ -143,43 +182,42 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-top: auto; /* Position en bas */
 }
 
 /* Bulle (Modale 2) */
-.bubble {
-  display: none; /* Cachée par défaut */
-  position: absolute;
-  width: 384px; /* Largeur ajustée */
-  height: 194px; /* Hauteur ajustée */
-  top: -220px; /* Position au-dessus de l'image */
-  left: 50%; /* Centrer horizontalement par rapport à l'image */
-  transform: translateX(-50%); /* Correction du centrage */
-  background: #f2f2f2; /* Couleur de fond */
-  padding: 1rem;
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  text-align: center;
+#testimonials {
+  height: 564px;
+  display: flex;
+  flex-direction: column; /* Colonne pour aligner titre et contenu */
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
 }
 
-.bubble h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.bubble p {
-  font-size: 0.9rem;
+#testimonials h2 {
   margin-bottom: 1rem;
 }
 
-.bubble button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.testimonial-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end; /* Place les images en bas */
+  width: 100%;
+  position: relative; /* Pour positionner les bulles */
+}
+
+.testimonial {
+  text-align: center;
+  position: relative;
+  max-width: 250px;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: auto; /* Position en bas */
 }
 
 .bubble button:hover {
@@ -204,8 +242,13 @@ body {
 
 /* Section 3: Logos */
 #logos {
-  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Permet le passage à la ligne */
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 2rem 0;
 }
 
 .logo-grid {
@@ -215,10 +258,12 @@ body {
 }
 
 .logo-grid img {
-  width: 150px;
+  width: 150px; /* Taille fixe pour les logos */
   height: auto;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+}
+
+.logo-grid img:nth-child(1n) {
+  margin-bottom: 1rem; /* Espace entre les lignes */
 }
 
 .logo-grid img:hover {
