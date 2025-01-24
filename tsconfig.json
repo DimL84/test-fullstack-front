@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",           // Cible la version ES6 pour la compilation
+    "module": "commonjs",      // Utilise CommonJS pour la gestion des modules
+    "outDir": "./dist",        // Spécifie le dossier de sortie compilé
+    "rootDir": "./src",        // Dossier source des fichiers .ts
+    "esModuleInterop": true,   // Pour éviter des problèmes d'import/export
+    "strict": true,            // Active la vérification stricte des types
+    "skipLibCheck": true,      // Ignore les erreurs liées aux types des bibliothèques externes
+    "forceConsistentCasingInFileNames": true, 
+    "lib": ["dom", "es6"]      // Inclut la bibliothèque DOM pour accéder aux éléments HTML
+  },
+  "include": [
+    "src/**/*.ts"              // Inclut tous les fichiers .ts dans le dossier src/
+  ],
+  "exclude": [
+    "node_modules"             // Exclut le dossier node_modules
+  ]
+}

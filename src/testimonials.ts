@@ -11,9 +11,11 @@ interface ITestimonial {
     rating: number;
 }
 
+// Fonction pour récupérer les 3 meilleurs témoignages
 export function getThreeTopTestimonials(testimonials: ITestimonial[]) {
-    return testimonials.slice(0, 3);
+  return testimonials.sort((a, b) => b.rating - a.rating).slice(0, 3);
 }
+
 
 export const testimonials: ITestimonial[] = [
     {
@@ -60,5 +62,5 @@ export const testimonials: ITestimonial[] = [
       title: "Highly Recommend",
       body: "Top-notch service with great attention to detail.",
       rating: 1
-    }
-  ]
+    },
+  ];

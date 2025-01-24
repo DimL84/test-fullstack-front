@@ -8,9 +8,9 @@ services:
     networks:
       - test_entretien
     volumes:
-      - ./lib:/app/lib,
+      - ./src:/app/src,
       - .:/app
-    command: ["deno", "run", "--allow-net", "--allow-read", "/app/lib/main.ts"]
+    command: ["deno", "run", "--allow-net", "--allow-read", "/app/src/main.ts"]
 
 networks:
   test_entretien:

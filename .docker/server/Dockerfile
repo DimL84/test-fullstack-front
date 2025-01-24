@@ -18,4 +18,5 @@ COPY . .
 # Compile the main app so that it doesn't need to be compiled each startup/entry.
 RUN deno cache main.ts
 
-CMD ["deno", "run", "--allow-net", "--allow-read", "/app/lib/main.ts"]
+# Commande de démarrage
+CMD ["deno", "run", "--allow-net", "--allow-read", "src/main.ts"]

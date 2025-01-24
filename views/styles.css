@@ -1,0 +1,189 @@
+        /* Custom CSS for styling */
+        .hero-section {
+            padding: 50px 0;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-buttons .btn {
+            margin-right: 15px;
+        }
+
+        .hero-images img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .exit-modal {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        .exit-modal h5,
+        .exit-modal p {
+            margin: 0 0 10px 0;
+        }
+
+        .exit-modal .btn {
+            background: #000;
+            color: #fff;
+        }
+
+        .team-section .team-card:hover .team-hover {
+            display: block;
+        }
+
+        .team-hover {
+            display: none;
+            position: absolute;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            z-index: 2;
+        }
+
+        .logos-section img {
+            max-width: 100px;
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                text-align: center;
+            }
+
+            .hero-images {
+                margin-top: 20px;
+            }
+
+            .logos-section {
+                text-align: center;
+            }
+
+            .logos-section img {
+                margin: 5px auto;
+            }
+        }
+
+        /* === Styles pour la section Testimonials === */
+        #testimonials {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+        }
+
+        #testimonials h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+
+        /* Style des cartes de témoignages */
+        #testimonial-cards .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #testimonial-cards .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Style de l'image du témoignage */
+        #testimonial-cards .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #6c757d;
+            margin-bottom: 15px;
+        }
+
+        /* Style des titres et textes */
+        #testimonial-cards .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        #testimonial-cards .card-subtitle {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        #testimonial-cards .card-text {
+            font-size: 0.95rem;
+            color: #495057;
+            margin-top: 10px;
+        }
+
+        /* Style du footer des cartes */
+        #testimonial-cards .card-footer {
+            background-color: transparent;
+            border: none;
+            margin-top: 10px;
+        }
+
+        #testimonial-cards .badge {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+        }
+
+        /* styles.css */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffeb3b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* public/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
